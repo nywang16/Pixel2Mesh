@@ -98,7 +98,7 @@ This software is for research purpose only. </br>
 Please contact us for the licence of commercial purposes. All rights are preserved.
 
 # Contact
-Nanyang Wang (nywang16 AT 163.com)
+Nanyang Wang (nywang16 AT fudan.edu.cn)
 
 Yinda Zhang (yindaz AT cs.princeton.edu)
 
