@@ -1,0 +1,3 @@
+Sampling points on the ShapeNet CAD model:
+
+meshlabserver -i 1a0bc9ab92c915167ae33d942430658c/model.obj -o 1a0bc9ab92c915167ae33d942430658c/model.xyz -s upsample.mlx
