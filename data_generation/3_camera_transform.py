@@ -49,10 +49,10 @@ if __name__ == '__main__':
 
         pt_trans = np.dot(position-cam_pos, cam_mat.transpose())
         nom_trans = np.dot(normal, cam_mat.transpose())
+        train_data = np.hstack((pt_trans, nom_trans))
         
         #### project for sure
         img_path = os.path.join(os.path.split(view_path)[0], '%02d.png'%index)
-        train_data = np.hstack((pt_trans, nom_trans))
         np.savetxt(img_path.replace('png','xyz'), train_data)
         
         img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
