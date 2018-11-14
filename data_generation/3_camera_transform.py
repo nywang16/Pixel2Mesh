@@ -55,7 +55,7 @@ if __name__ == '__main__':
         img_path = os.path.join(os.path.split(view_path)[0], '%02d.png'%index)
         np.savetxt(img_path.replace('png','xyz'), train_data)
         
-        img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
+        img = cv2.imread(img_path)
         img = cv2.resize(img, (224,224))
         
         X,Y,Z = pt_trans.T
