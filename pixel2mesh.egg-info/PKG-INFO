@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: pixel2mesh
+Version: 1.0
+Summary: Implementation of Pixel2Mesh in TensorFlow
+Home-page: http://bigvid.fudan.edu.cn/pixel2mesh
+Author: Nanyang Wang
+Author-email: nywang16@163.com
+License: UNKNOWN
+Download-URL: https://github.com/nywang16/Pixel2Mesh
+Description: UNKNOWN
+Platform: UNKNOWN

@@ -1,0 +1,17 @@
+README.md
+setup.py
+pixel2mesh/__init__.py
+pixel2mesh/cd_dist.py
+pixel2mesh/demo.py
+pixel2mesh/eval_testset.py
+pixel2mesh/fetcher.py
+pixel2mesh/inits.py
+pixel2mesh/layers.py
+pixel2mesh/losses.py
+pixel2mesh/models.py
+pixel2mesh/train.py
+pixel2mesh.egg-info/PKG-INFO
+pixel2mesh.egg-info/SOURCES.txt
+pixel2mesh.egg-info/dependency_links.txt
+pixel2mesh.egg-info/requires.txt
+pixel2mesh.egg-info/top_level.txt
