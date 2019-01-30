@@ -11,7 +11,7 @@ tf.set_random_seed(seed)
 # Settings
 flags = tf.app.flags
 FLAGS = flags.FLAGS
-flags.DEFINE_string('data_list', 'utils/train_list.txt', 'Data list path.')
+flags.DEFINE_string('data_list', 'pixel2mesh/utils/train_list.txt', 'Data list path.')
 flags.DEFINE_float('learning_rate', 3e-5, 'Initial learning rate.')
 flags.DEFINE_integer('epochs', 30, 'Number of epochs to train.')
 flags.DEFINE_integer('hidden', 192, 'Number of units in  hidden layer.')
@@ -73,11 +73,11 @@ sess.run(tf.global_variables_initializer())
 model.load(sess)
 
 # Construct feed dictionary
-pkl = pickle.load(open('utils/ellipsoid/info_ellipsoid.dat', 'rb'))
+pkl = pickle.load(open('pixel2mesh/utils/ellipsoid/info_ellipsoid.dat', 'rb'))
 feed_dict = construct_feed_dict(pkl, placeholders)
 
 # Train model
-train_loss = open('utils/record_training_loss.log', 'a')
+train_loss = open('pixel2mesh/utils/record_training_loss.log', 'a')
 train_loss.write('Start training, lr =  %f\n'%(FLAGS.learning_rate))
 for epoch in range(FLAGS.epochs):
 	all_loss = np.zeros(train_number, dtype='float32') 

@@ -1,6 +1,9 @@
 import tensorflow as tf
 from tensorflow.python.framework import ops
-nn_distance_module=tf.load_op_library('./external/tf_nndistance_so.so')
+import os 
+
+print(os.getcwd())
+nn_distance_module=tf.load_op_library('./pixel2mesh/external/tf_nndistance_so.so')
 
 def nn_distance(xyz1,xyz2):
 	'''

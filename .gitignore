@@ -1,0 +1,5 @@
+*.pyc
+*.so
+*.o
+pixel2mesh/external
+*.zip
