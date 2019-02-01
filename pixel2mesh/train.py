@@ -11,7 +11,7 @@ tf.set_random_seed(seed)
 # Settings
 flags = tf.app.flags
 FLAGS = flags.FLAGS
-flags.DEFINE_string('data_list', 'pixel2mesh/utils/train_list.txt', 'Data list path.')
+flags.DEFINE_string('data_list', 'pixel2mesh/utils/train_list_new.txt', 'Data list path.')
 flags.DEFINE_float('learning_rate', 3e-5, 'Initial learning rate.')
 flags.DEFINE_integer('epochs', 30, 'Number of epochs to train.')
 flags.DEFINE_integer('hidden', 192, 'Number of units in  hidden layer.')
@@ -61,7 +61,7 @@ def construct_feed_dict(pkl, placeholders):
 # Load data
 data = DataFetcher(FLAGS.data_list)
 data.setDaemon(True) ####
-data.start()
+data.start() # To initiate the threads
 train_number = data.number
 
 # Initialize session

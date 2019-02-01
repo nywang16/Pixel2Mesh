@@ -2,13 +2,16 @@ import numpy as np
 import cPickle as pickle
 import threading
 import Queue
+import sys
 #np.random.seed(123)
 
+# DataFetcher's parent class is Threading.Thread, which is a multi-thread execution tool
 class DataFetcher(threading.Thread):
 	def __init__(self, file_list):
-		super(DataFetcher, self).__init__()
+		super(DataFetcher, self).__init__() # inherit parent class **private** func __init__
 		self.stopped = False
 		self.queue = Queue.Queue(64)
+		# Basic FIFO queue: 64 the upperbound limit on the number of items than can be placed in hte queue.
 
 		self.pkl_list = []
 		with open(file_list, 'r') as f:
@@ -54,5 +57,5 @@ if __name__ == '__main__':
 	image,point,_ = data.fetch()
 	print image.shape
 	print point.shape
-	print normal.shape
+	# print normal.shape
 	data.stopped = True

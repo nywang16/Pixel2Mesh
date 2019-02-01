@@ -11,7 +11,7 @@ tf.set_random_seed(seed)
 # Settings
 flags = tf.app.flags
 FLAGS = flags.FLAGS
-flags.DEFINE_string('image', 'utils/examples/chair.png', 'Testing image.')
+flags.DEFINE_string('image', 'pixel2mesh/utils/examples/chair.png', 'Testing image.')
 flags.DEFINE_float('learning_rate', 0., 'Initial learning rate.')
 flags.DEFINE_integer('hidden', 192, 'Number of units in  hidden layer.')
 flags.DEFINE_integer('feat_dim', 963, 'Number of units in perceptual feature layer.')
@@ -74,7 +74,8 @@ sess.run(tf.global_variables_initializer())
 model.load(sess)
 
 # Runing the demo
-pkl = pickle.load(open('utils/ellipsoid/info_ellipsoid.dat', 'rb'))
+pkl = pickle.load(open('./pixel2mesh/utils/ellipsoid/info_ellipsoid.dat', 'rb'))
+
 feed_dict = construct_feed_dict(pkl, placeholders)
 
 img_inp = load_image(FLAGS.image)
@@ -83,9 +84,9 @@ feed_dict.update({placeholders['labels']: np.zeros([10,6])})
 
 vert = sess.run(model.output3, feed_dict=feed_dict)
 vert = np.hstack((np.full([vert.shape[0],1], 'v'), vert))
-face = np.loadtxt('utils/ellipsoid/face3.obj', dtype='|S32')
+face = np.loadtxt('./pixel2mesh/utils/ellipsoid/face3.obj', dtype='|S32')
 mesh = np.vstack((vert, face))
 pred_path = FLAGS.image.replace('.png', '.obj')
 np.savetxt(pred_path, mesh, fmt='%s', delimiter=' ')
 
-print 'Saved to', pred_path
+print('Saved to', pred_path)
