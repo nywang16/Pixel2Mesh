@@ -1,0 +1,12 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Poisson-disk Sampling">
+  <Param type="RichInt" value="1000" name="SampleNum"/>
+  <Param type="RichAbsPerc" value="0.011" min="0" name="Radius" max="1"/>
+  <Param type="RichInt" value="20" name="MontecarloRate"/>
+  <Param type="RichBool" value="false" name="ApproximateGeodesicDistance"/>
+  <Param type="RichBool" value="false" name="Subsample"/>
+  <Param type="RichBool" value="false" name="RefineFlag"/>
+  <Param type="RichMesh" value="0" name="RefineMesh"/>
+ </filter>
+</FilterScript>
