@@ -102,3 +102,5 @@ Yanwei Fu (yanweifu AT fudan.edu.cn)
 
 Yu-Gang Jiang (ygj AT fudan.edu.cn)
 
+# License
+Apache License version 2.0
