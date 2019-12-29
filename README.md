@@ -28,6 +28,9 @@ Requirements:
 
 Our code has been tested with Python 2.7, **TensorFlow 1.3.0**, TFLearn 0.3.2, CUDA 8.0 on Ubuntu 14.04.
 
+# News
+- Nov. 8, we update the script for generate auxiliary data.
+
 # Running the demo
 ```
 git clone https://github.com/nywang16/Pixel2Mesh.git
