@@ -26,9 +26,9 @@ _LAYER_UIDS = {}
 
 def project(img_feat, x, y, dim):
 	x1 = tf.floor(x)
-	x2 = tf.ceil(x)
+	x2 = tf.minimum(tf.ceil(x), tf.cast(tf.shape(img_feat)[0], tf.float32) - 1)
 	y1 = tf.floor(y)
-	y2 = tf.ceil(y)
+	y2 = tf.minimum(tf.ceil(y), tf.cast(tf.shape(img_feat)[1], tf.float32) - 1)
 	Q11 = tf.gather_nd(img_feat, tf.stack([tf.cast(x1,tf.int32), tf.cast(y1,tf.int32)],1))
 	Q12 = tf.gather_nd(img_feat, tf.stack([tf.cast(x1,tf.int32), tf.cast(y2,tf.int32)],1))
 	Q21 = tf.gather_nd(img_feat, tf.stack([tf.cast(x2,tf.int32), tf.cast(y1,tf.int32)],1))
