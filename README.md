@@ -25,7 +25,7 @@ Installing all the dependencies might be tricky and you need a computer with a C
 
 
 # Project Page
-The project page is available at http://bigvid.fudan.edu.cn/pixel2mesh
+The project page is available at https://nywang16.github.io/p2m/index.html
 
 # Dependencies
 Requirements:
