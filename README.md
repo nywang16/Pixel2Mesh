@@ -5,8 +5,6 @@ This repository contains the TensorFlow implementation for the following paper</
 
 Nanyang Wang, [Yinda Zhang](http://robots.princeton.edu/people/yindaz/), [Zhuwen Li](http://www.lizhuwen.com/), [Yanwei Fu](http://yanweifu.github.io/), [Wei Liu](http://www.ee.columbia.edu/~wliu/), [Yu-Gang Jiang](http://www.yugangjiang.info/).
 
-The code is based on the [gcn](https://github.com/tkipf/gcn) framework.
-
 #### Citation
 If you use this code for your research, please consider citing:
 
